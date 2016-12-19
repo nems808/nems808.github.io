@@ -1,2 +1,2 @@
 # nems808.github.io
-Personal profolio page change 2
+Personal portfolio page change 2
