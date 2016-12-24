@@ -8,7 +8,7 @@
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="portstyle.css" rel="stylesheet">
+    <link href="css/portstyle.css" rel="stylesheet">
 </head>
 
 <body translate="no">
@@ -182,40 +182,8 @@
     <!-- </div> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
-    <script>
-        $(document).ready(function() {
-            $('a').on('click', function(event) {
-                if (this.hash !== '') {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function() {
-                        window.location.hash = hash;
-                    });
-                }
-            });
-        });
-
-        function init() {
-            window.addEventListener('scroll', function(e) {
-                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                    shrinkOn = 50,
-                    header = document.querySelector('header');
-                if (distanceY > shrinkOn) {
-                    $('header').addClass('smaller');
-                } else {
-                    if ($('header').hasClass('smaller')) {
-                        $('header').removeClass('smaller');
-                    }
-                }
-            });
-        }
-        window.onload = init();
-        $(window).on('resize', function() {
-            var header_height = $('header').height();
-            $('.anchor').css('padding-top', header_height);
-        });
+    <script src='js/index.js'>
+        
         //# sourceURL=pen.js
     </script>
 
